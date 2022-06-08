@@ -1,0 +1,9 @@
+.root{
+    -fx-background-image: url("https://res.cloudinary.com/tf-lab/image/upload/restaurant/6576eedb-e940-443a-9c4f-2154867671b2/62314950-00f5-4780-aa8c-3e3be6d40f19.jpg");
+    -fx-background-size: 1550 550;
+    -fx-background-position: center;
+}
+
+.table-view {
+-fx-background-color: #eceff1;
+}

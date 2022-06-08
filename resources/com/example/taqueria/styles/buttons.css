@@ -1,0 +1,27 @@
+#createBtn {
+-fx-background-color: linear-gradient(to bottom, #c8e6c9, #a5d6a7);
+}
+#createBtn:hover {
+-fx-background-color: linear-gradient(to bottom, #a5d6a7, #81c784);
+}
+#createBtn:pressed {
+-fx-background-color: linear-gradient(to bottom, #c5e1a5, #aed581);
+}
+#updateBtn {
+-fx-background-color: linear-gradient(to bottom, #c5cae9, #9fa8da);
+}
+#updateBtn:hover {
+-fx-background-color: linear-gradient(to bottom, #9fa8da, #7986cb);
+}
+#updateBtn:pressed {
+-fx-background-color: linear-gradient(to bottom, #90caf9, #64b5f6);
+}
+#deleteBtn {
+-fx-background-color: linear-gradient(to bottom, #ffcdd2, #ef9a9a);
+}
+#deleteBtn:hover {
+-fx-background-color: linear-gradient(to bottom, #ef9a9a, #e57373);
+}
+#deleteBtn:hover {
+-fx-background-color: linear-gradient(to bottom, #f48fb1, #f06292);
+}

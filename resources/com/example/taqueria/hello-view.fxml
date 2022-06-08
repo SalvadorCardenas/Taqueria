@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.taqueria.HelloController"
+            stylesheets="@styles/tables.css">
+
+    <top>
+        <HBox >
+            <Button fx:id="TOP" minHeight="105" minWidth="90">
+                <graphic>
+                    <ImageView fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="/categoria.jpeg" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="Tacos" >
+                <graphic>
+                    <ImageView fitHeight="100.0" fitWidth="460.0" pickOnBounds="false" preserveRatio="false">
+                        <image>
+                            <Image url="/Taqueria.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button minHeight="105"  minWidth="90" fx:id="Orders">
+                <graphic>
+                    <ImageView fitHeight="90.0" fitWidth="320.0">
+                        <image>
+                            <Image url="/Orden.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+        </HBox>
+    </top>
+    <center>
+        <GridPane alignment="TOP_LEFT">
+            <TableView fx:id="tblCat" GridPane.rowIndex="1" GridPane.columnIndex="1">
+                <columns>
+                    <TableColumn minWidth="150" text="Seleccionar Categoria">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="nombre" >
+                            </PropertyValueFactory>
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+            <TableView fx:id="tblAli" GridPane.rowIndex="1" GridPane.columnIndex="2">
+                <columns>
+                    <TableColumn minWidth="250" text="Alimentos">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="nombre" >
+                            </PropertyValueFactory>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn minWidth="240" text="Precios $$">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="precio" >
+                            </PropertyValueFactory>
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+            <TableView fx:id="tblOrden" GridPane.rowIndex="1" GridPane.columnIndex="3">
+                <columns>
+                    <TableColumn minWidth="200" text="NOMBRE">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="nombre" >
+                            </PropertyValueFactory>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn minWidth="130" text="PRECIO">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="precio" >
+                            </PropertyValueFactory>
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+        </GridPane>
+    </center>
+    <left>
+        <VBox>
+            <Button fx:id="categoriaButton" text="CUENTA " onAction="#Categoria">
+                <graphic>
+                    <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="/aplicacion.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="TOTAL" text="TOTAL : " minHeight="90" minWidth="150">
+            </Button>
+            <Button fx:id="BORRAR" text="BORRAR" minHeight="90" minWidth="150" stylesheets="@styles/buttons.css" id="deleteBtn">
+            </Button>
+            <Button fx:id="crudCategorias" text="ADMIN CATEGORIAS" minHeight="90" minWidth="150"/>
+            <Button fx:id="crudAlimentos" text="ADMIN ALIMENTOS" minHeight="90" minWidth="150"/>
+        </VBox>
+    </left>
+    <right>
+        <GridPane fx:id="PruebaG" alignment="CENTER">
+            <Button fx:id="Prueba" GridPane.rowIndex="1"  GridPane.columnIndex="1"></Button>
+            <Button fx:id="Prueba1" GridPane.rowIndex="1"  GridPane.columnIndex="2"></Button>
+            <Button fx:id="Prueba2" GridPane.rowIndex="2"  GridPane.columnIndex="1"></Button>
+            <Button fx:id="Prueba3" GridPane.rowIndex="2"  GridPane.columnIndex="2"></Button>
+            <Button fx:id="Prueba4" GridPane.rowIndex="3"  GridPane.columnIndex="1"></Button>
+            <Button fx:id="Prueba5" GridPane.rowIndex="3"  GridPane.columnIndex="2" ></Button>
+        </GridPane>
+    </right>
+    <bottom>
+        <HBox>
+
+
+        </HBox>
+    </bottom>
+</BorderPane>
+        <?import javafx.scene.control.RadioButton?>
